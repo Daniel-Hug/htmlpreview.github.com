@@ -9,7 +9,7 @@ var HTMLPreview = {
 	},
 
 	raw: function() {
-		return HTMLPreview.file().replace(/\/\/github\.com/, '//raw.github.com').replace(/\/blob\//, '/'); //Get URL of the raw file
+		return HTMLPreview.file().replace(/\/\/github\.com/, '//raw.github.com').replace(/\/blob\//, '/').split('//raw.github.com').join('//cdn.herokuapp.com'); //Get URL of the raw file
 	},
 
 	replaceAssets: function() {
